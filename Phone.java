@@ -10,6 +10,11 @@ public class Phone implements IPrototype {
     private String batteryTime;
     private Accesory[] accesories;
 
+    public Phone(SIM sim, Accesory[] accessories) {
+        this.sim = sim;
+        this.accesories = accessories;
+    }
+
     public String getSize() {
         return size;
     }
