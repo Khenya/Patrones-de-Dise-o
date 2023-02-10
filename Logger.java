@@ -10,6 +10,8 @@ public class Logger {
 
     private Logger() throws IOException {
         System.out.println("Iniciar Registro");
+        
+        write = new FileWriter(file, true);
         line = new PrintWriter(write);
         line.println("Se INICIO EL REGISTRO");
     }
