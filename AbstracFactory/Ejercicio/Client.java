@@ -3,27 +3,37 @@ package AbstracFactory.Ejercicio;
 public class Client {
     public static void main(String[] args) {
         String ipasajeSolidario="pasjeSolidario";
-        FactoryPasaje.make(ipasajeSolidario).comprarPasaje();
-        FactoryPasaje.make(ipasajeSolidario).showInfo();
+        PasajeStandard pasajeSolidario1 = (PasajeStandard) FactoryPasaje.make(ipasajeSolidario);
+        pasajeSolidario1.comprarPasaje();
+        pasajeSolidario1.showInfo();
+
+        
+        PasajeStandard pasajeSolidario2 = (PasajeStandard) FactoryPasaje.make(ipasajeSolidario);
+        pasajeSolidario2.comprarPasaje();
+        pasajeSolidario2.setAsiento("9A");
+        pasajeSolidario2.showInfo();
+
 
         String ipasajeStandard1="pasjeStandard";
-        FactoryPasaje.make(ipasajeStandard1).comprarPasaje();
-        FactoryPasaje.make(ipasajeStandard1).showInfo();
+        PasajeStandard pasajeStandard1 = (PasajeStandard) FactoryPasaje.make(ipasajeStandard1);
+        pasajeStandard1.comprarPasaje();
+        pasajeStandard1.showInfo();
+
+        PasajeStandard pasajeStandard2 = (PasajeStandard) FactoryPasaje.make(ipasajeStandard1);
+        pasajeStandard2.comprarPasaje();
+        pasajeStandard2.setAsiento("99C");
+        pasajeStandard2.showInfo();
 
         String ipasajeInfantes="pasjeInfantes";
-        FactoryPasaje.make(ipasajeInfantes).comprarPasaje();
-        FactoryPasaje.make(ipasajeInfantes).comprarPasaje();
 
-        String ipasajeSolidario1="pasjeSolidario";
-        FactoryPasaje.make(ipasajeSolidario1).comprarPasaje();
-        FactoryPasaje.make(ipasajeSolidario1).showInfo();
+        PasajeInfantes pasajeInfantes1 = (PasajeInfantes) FactoryPasaje.make(ipasajeInfantes);
+        pasajeInfantes1.comprarPasaje();
+        pasajeInfantes1.showInfo();
 
-        String ipasajeStandard="pasjeStandard";
-        FactoryPasaje.make(ipasajeStandard).comprarPasaje();
-        FactoryPasaje.make(ipasajeStandard).showInfo();
+        PasajeInfantes pasajeInfantes2 = (PasajeInfantes) FactoryPasaje.make(ipasajeInfantes);
+        pasajeInfantes2.comprarPasaje();
+        pasajeInfantes2.setAsiento("53B");
+        pasajeInfantes2.showInfo();
 
-        String ipasajeInfantes1="pasjeInfantes";
-        FactoryPasaje.make(ipasajeInfantes1).comprarPasaje();
-        FactoryPasaje.make(ipasajeInfantes1).showInfo();
     }
 }

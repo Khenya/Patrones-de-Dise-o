@@ -5,7 +5,7 @@ public class PasajeInfantes  extends IPasaje{
     private Destino destino;
     private Origen origen;
     private Avion avion;
-    private Pasajero pasajero;
+    private factoryMethod.ejercicio.Pasajero pasajero;
     private String asiento;
     private String costoEspecial;
     
@@ -23,11 +23,11 @@ public class PasajeInfantes  extends IPasaje{
         this.asiento = asiento;
     }
 
-    public Pasajero getPasajero() {
+    public factoryMethod.ejercicio.Pasajero getPasajero() {
         return pasajero;
     }
-    public void setPasajero(Pasajero pasajero) {
-        this.pasajero = pasajero;
+    public void setPasajero(factoryMethod.ejercicio.Pasajero pasajero2) {
+        this.pasajero = pasajero2;
     }
 
     public Avion getAvion() {
