@@ -1,4 +1,4 @@
-package factoryMethod;
+package factoryMethod.template;
 
 public class ConcreteProduct1 implements IProduct{
     @Override

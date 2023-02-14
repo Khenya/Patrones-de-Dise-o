@@ -1,3 +1,5 @@
+package PrototypeEjercico.Template;
+
 public class ConcretePrototypeA implements IPrototype {
 
     private String attribute1;

@@ -1,4 +1,4 @@
-package factoryMethod;
+package factoryMethod.template;
 
 public class Client {
     public static void main (String[]ars){

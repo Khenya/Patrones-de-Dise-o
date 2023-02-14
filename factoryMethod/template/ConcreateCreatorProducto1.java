@@ -1,4 +1,4 @@
-package factoryMethod;
+package factoryMethod.template;
 
 public class ConcreateCreatorProducto1 extends Creator {
     @Override

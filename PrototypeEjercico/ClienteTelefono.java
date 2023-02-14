@@ -1,3 +1,4 @@
+package PrototypeEjercico;
 public class ClienteTelefono {
     public static void main(String []args){
         

@@ -1,3 +1,5 @@
+package PrototypeEjercico.Template;
+
 public class Client {
     public static void main(String []args){
         ConcretePrototypeA object1 = new ConcretePrototypeA();

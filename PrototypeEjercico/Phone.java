@@ -1,3 +1,6 @@
+package PrototypeEjercico;
+import PrototypeEjercico.Template.IPrototype;
+
 public class Phone implements IPrototype {
 
     private String size;
@@ -90,7 +93,7 @@ public class Phone implements IPrototype {
 
     @Override
     public Phone clone() {
-        Phone clone = new Phone();
+        Phone clone = new Phone(sim, accesories);
         clone.setCamera(this.getCamera());
         clone.setCpu(this.getCpu());
         clone.setSize(this.getSize());

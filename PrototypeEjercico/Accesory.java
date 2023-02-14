@@ -1,3 +1,4 @@
+package PrototypeEjercico;
 public class Accesory {
     private String type;
 
