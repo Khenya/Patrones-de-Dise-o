@@ -3,12 +3,12 @@ package PracticaPrimerParcial.Ejercicio6;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Traductor {
-    private List<EspanolIngles> translate = new ArrayList<EspanolIngles>();
+public class Traductor extends EspanolIngles{
+    private List<EspanolIngles> translate = new ArrayList<>();
     private Context context;
 
     public Traductor(String messages) {
-        context = new Context(messages.replace(" ", ""));
+        context = new Context(messages);
         
         for(String palabra : messages.split(" ")){
             switch (palabra){
@@ -21,9 +21,6 @@ public class Traductor {
                 case "Para":
                     translate.add(new Then());
                     break;
-                case "administrador":
-				    translate.add(new Administrator());
-				    break;
                 default:
                     translate.add(new OtraPalabra());
                     break;
@@ -31,10 +28,14 @@ public class Traductor {
         }
     }
 
-    public String getOutput() {
-		for (EspanolIngles espanolIngles : translate) {
-			espanolIngles.interpreter(context);
-		}
-		return context.getOutput();
-	}
+    public String traduccion(){
+        for(EspanolIngles espanolIngles:translate){
+            espanolIngles.interpreter(context);
+        }
+        return context.output;
+    }
+    @Override
+    public void interpreter(Context context) {
+        
+    }
 }
