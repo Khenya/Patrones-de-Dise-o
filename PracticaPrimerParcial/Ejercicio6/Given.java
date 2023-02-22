@@ -3,9 +3,9 @@ package PracticaPrimerParcial.Ejercicio6;
 public class Given extends EspanolIngles {
     @Override
     public void interpreter(Context context) {
-        if (context.input.startsWith("como")) {
-            context.output = context.output + "Given " ;
-            context.input= context.input.substring(5); 
+        if (context.getInput().startsWith("Como")) {
+            context.setOutput(context.getOutput() + "Given ");
+            context.setInput(context.getInput().substring(4));
         }
     }
 }

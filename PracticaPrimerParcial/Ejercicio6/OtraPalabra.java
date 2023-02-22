@@ -1,10 +1,11 @@
 package PracticaPrimerParcial.Ejercicio6;
 
 public class OtraPalabra extends EspanolIngles{
+    private String palabra;
+    
     @Override
     public void interpreter(Context context) {
-        String value=context.input.split(" ")[0];
-        context.output = context.output + value+" " ;
-        context.input = context.input.substring(value.length()+1);
-    }
+		context.setOutput(context.getOutput() + palabra + " ");
+		context.setInput(context.getInput().substring(palabra.length()));
+	}
 }
