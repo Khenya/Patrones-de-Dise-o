@@ -13,6 +13,9 @@ public class Empresa1 implements Union {
     public void setEmpleados(List<Empleado> empleados) {
         this.empleados = empleados;
     }
+    public void addEmpleado(Empleado empleado){
+        empleados.add(empleado);
+    }
 
     public String getGerente() {
         return gerente;
@@ -23,10 +26,11 @@ public class Empresa1 implements Union {
 
     public Empresa1(String gerente){
         this.gerente = gerente;
+        empleados = new ArrayList<>();
     }
+
     @Override
 	public Iterator getIterator() {
-		Iterator iterator = new IteratorEmpresa1(empleados);
-		return iterator;
+		return new IteratorEmpresa1(empleados);
 	}
 }

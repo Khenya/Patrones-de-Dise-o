@@ -13,6 +13,9 @@ public class Empresa4 implements Union {
 	public void setEmpleados(Stack<Empleado> empleados) {
 		this.empleados = empleados;
 	}
+	public void addEmpleado(Empleado empleado){
+        empleados.add(empleado);
+    }
 
 	public String getGerente() {
 		return gerente;
@@ -23,6 +26,7 @@ public class Empresa4 implements Union {
 
 	public Empresa4(String gerente) {
 		this.gerente = gerente;
+		empleados = new Stack<>();
 	}
 
 	@Override

@@ -12,6 +12,9 @@ public class Empresa3 implements Union {
 	public void setEmpleados(Vector<Empleado> empleados) {
 		this.empleados = empleados;
 	}
+	public void addEmpleado(Empleado empleado){
+        empleados.add(empleado);
+    }
 
 	public String getGerente() {
 		return gerente;
@@ -22,6 +25,7 @@ public class Empresa3 implements Union {
 
     public Empresa3(String gerente) {
         this.gerente = gerente;
+		empleados = new Vector<>();
     }
 
     @Override
