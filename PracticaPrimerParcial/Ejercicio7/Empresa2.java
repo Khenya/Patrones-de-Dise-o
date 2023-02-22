@@ -1,19 +1,31 @@
 package PracticaPrimerParcial.Ejercicio7;
 
 public class Empresa2 implements Union {
-    private int position;
-    private String [] nombres ;
-    public Empresa2(){
-        position=0;
-        nombres= new String[4];
-    }
-    public void add(String value){
-        nombres[position]=value;
-        position++;
-    }
-    @Override
-    public IteratorEmpresa2 iterator() {
-        return  new IteratorEmpresa2(nombres);
-    }
+    private Empleado empleados[];
+	private String gerente;
+
+	public Empleado[] getEmpleado() {
+		return empleados;
+	}
+	public void setEmpleado(Empleado[] empleado) {
+		this.empleados = empleado;
+	}
+
+	public String getGerente() {
+		return gerente;
+	}
+	public void setGerente(String gerente) {
+		this.gerente = gerente;
+	}
+
+	public Empresa2(String gerente) {
+		this.gerente = gerente;
+	}
+
+	@Override
+	public Iterator getIterator() {
+		Iterator iterator = new IteratorEmpresa2(empleados);
+		return iterator;
+	}
     
 }

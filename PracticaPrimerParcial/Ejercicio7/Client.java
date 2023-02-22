@@ -1,55 +1,14 @@
 package PracticaPrimerParcial.Ejercicio7;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Stack;
+import java.util.Vector;
 
 public class Client {
     public static void main(String[] args) {
-        int i =0;
-        HashMap<String,String> union = new HashMap<>();
-
-        Empresa1 lista1 = new Empresa1();
-        lista1.add("Pedro Poma");
-        lista1.add("Nicolas Murillo");
-
-        Empresa2 lista2 = new Empresa2();
-        lista2.add("Yamil Idalgo");
-        lista2.add("Nicole Quisbert");
-
-        Empresa3 lista3 = new Empresa3();
-        lista3.add("Camilo Vilar");
-        lista3.add("Perez Noval");
-
-        Empresa4 lista4 = new Empresa4();
-        lista4.add("Codi Alvarado");
-        lista4.add("Estefany Delgado");
-
-        Iterator iterator;
-        iterator = lista1.iterator();
-        while ( iterator.hasNext()){
-            String nombre = (String)iterator.next();
-            union.put(nombre,nombre);
-        }
-
-        iterator = lista2.iterator();
-        while ( iterator.hasNext()){
-            String nombre = (String)iterator.next();
-            union.put(nombre,nombre);
-        }
-        iterator = lista3.iterator();
-        while ( iterator.hasNext()){
-            String nombre = (String)iterator.next();
-            union.put(nombre,nombre);
-        }
-        iterator = lista4.iterator();
-        while ( iterator.hasNext()){
-            String nombre = (String)iterator.next();
-            union.put(nombre,nombre);
-        }
-
-        for (String key:union.keySet()
-        ) {
-            i++;
-            System.out.println("Empleado " + i + ": " + union.get(key));
-        }
+        Empresa1 empresa1 = new Empresa1("Sonia Perales");
+        List<Empleado> empleadosEmpresa1 = List.of(new Empleado("Sonia", "Solar", "E25"), new Empleado("Sonia", "Llanos", "E3"));
+        empresa1.setEmpleados(empleadosEmpresa1);
     }
 }

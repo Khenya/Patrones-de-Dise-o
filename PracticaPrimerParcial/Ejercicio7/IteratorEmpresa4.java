@@ -3,22 +3,22 @@ package PracticaPrimerParcial.Ejercicio7;
 import java.util.Stack;
 
 public class IteratorEmpresa4 implements Iterator{
-    private Stack<String> nombres;
-    private int position;
+    private Stack<Empleado> empleados;
 
-    public IteratorEmpresa4(Stack<String> nombres) {
-        this.nombres = nombres;
-        this.position = 0;
+    public IteratorEmpresa4(Stack<Empleado> empleados) {
+        this.empleados = empleados;
     }
 
     @Override
-    public Object next() {
-        return nombres.get(position++);
-    }
+    public Empleado next() {
+        Empleado empleado = empleados.peek();
+		empleados.pop();
+		return empleado;
+	}
 
     @Override
     public boolean hasNext() {
-        return position < nombres.size() && nombres.size() != 0;
-    }
-    
+        boolean itHasNext = !empleados.isEmpty();
+		return itHasNext;
+	}
 }

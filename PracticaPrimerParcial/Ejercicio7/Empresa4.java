@@ -4,15 +4,30 @@ import java.util.Stack;
 
 public class Empresa4 implements Union {
     
-    private Stack<String> nombres ;
-    public Empresa4(){
-        nombres= new Stack<>();
-    }
-    public void add(String value){
-        nombres.add(value);
-    }
-    @Override
-    public IteratorEmpresa4 iterator() {
-        return  new IteratorEmpresa4(nombres);
-    }
+    private Stack<Empleado> empleados;
+    private String gerente;
+
+	public Stack<Empleado> getEmpleados() {
+		return empleados;
+	}
+	public void setEmpleados(Stack<Empleado> empleados) {
+		this.empleados = empleados;
+	}
+
+	public String getGerente() {
+		return gerente;
+	}
+	public void setGerente(String gerente) {
+		this.gerente = gerente;
+	}
+
+	public Empresa4(String gerente) {
+		this.gerente = gerente;
+	}
+
+	@Override
+	public Iterator getIterator() {
+		Iterator iterator = new IteratorEmpresa4(empleados);
+		return iterator;
+	}
 }

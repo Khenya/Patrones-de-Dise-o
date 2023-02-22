@@ -1,21 +1,23 @@
 package PracticaPrimerParcial.Ejercicio7;
 
 public class IteratorEmpresa2 implements Iterator{
-    private String [] nombres;
+    private Empleado [] empleados;
     private int position;
 
-    public IteratorEmpresa2(String[] nombres) {
-        this.nombres = nombres;
+    public IteratorEmpresa2(Empleado[] empleados) {
+        this.empleados = empleados;
         this.position = 0;
     }
 
     @Override
-    public Object next() {
-        return nombres[position];
-    }
+	public boolean hasNext() {
+		boolean itHasNext = this.empleados.length != 0 && position < this.empleados.length;
+		return itHasNext;
+	}
 
-    @Override
-    public boolean hasNext() {
-        return nombres.length != 0 && position < nombres.length;
-    }
+	@Override
+	public Empleado next() {
+		Empleado empleado = this.empleados[position++];
+		return empleado;
+	}
 }

@@ -3,22 +3,23 @@ package PracticaPrimerParcial.Ejercicio7;
 import java.util.Vector;
 
 public class IteratorEmpresa3 implements Iterator{
-    private Vector<String> nombres;
+    private Vector<Empleado> empleados;
     private int position;
 
-    public IteratorEmpresa3(Vector<String> nombres) {
-        this.nombres = nombres;
-        this.position = 0;
+    public IteratorEmpresa3(Vector<Empleado> empleados) {
+        this.empleados = empleados;
     }
 
     @Override
-    public Object next() {
-        return nombres.get(position++);
-    }
+    public Empleado next() {
+        Empleado empleado = this.empleados.get(position++);
+		return empleado;
+	}
 
     @Override
     public boolean hasNext() {
-        return position < nombres.size() && nombres.size() != 0;
-    }
+        boolean itHasNext = this.empleados.size() != 0 && position < this.empleados.size();
+		return itHasNext;
+	}
     
 }

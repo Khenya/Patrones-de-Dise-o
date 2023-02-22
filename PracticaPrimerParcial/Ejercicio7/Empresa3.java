@@ -3,18 +3,30 @@ package PracticaPrimerParcial.Ejercicio7;
 import java.util.Vector;
 
 public class Empresa3 implements Union {
-    Vector<String> nombres;
+    private Vector<Empleado> empleados;
+    private String gerente;
 
-    public Empresa3() {
-        nombres = new Vector<>();
-    }
+    public Vector<Empleado> getEmpleados() {
+		return empleados;
+	}
+	public void setEmpleados(Vector<Empleado> empleados) {
+		this.empleados = empleados;
+	}
 
-    public void add(String value) {
-        nombres.add(value);
+	public String getGerente() {
+		return gerente;
+	}
+	public void setGerente(String gerente) {
+		this.gerente = gerente;
+	}
+
+    public Empresa3(String gerente) {
+        this.gerente = gerente;
     }
 
     @Override
-    public IteratorEmpresa3 iterator() {
-        return new IteratorEmpresa3(this.nombres);
-    }
+    public Iterator getIterator() {
+		Iterator iterator = new IteratorEmpresa3(empleados);
+		return iterator;
+	}
 }

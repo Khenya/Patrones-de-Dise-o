@@ -4,18 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Empresa1 implements Union {
-    List<String> nombres;
+    private List<Empleado> empleados = new ArrayList<>();
+	private String gerente;
 
-    public Empresa1() {
-        nombres = new ArrayList<>();
+    public List<Empleado> getEmpleados() {
+        return empleados;
+    }
+    public void setEmpleados(List<Empleado> empleados) {
+        this.empleados = empleados;
     }
 
-    public void add(String value) {
-        nombres.add(value);
+    public String getGerente() {
+        return gerente;
+    }
+    public void setGerente(String gerente) {
+        this.gerente = gerente;
     }
 
+    public Empresa1(String gerente){
+        this.gerente = gerente;
+    }
     @Override
-    public IteratorEmpresa1 iterator() {
-        return new IteratorEmpresa1(this.nombres);
-    }
+	public Iterator getIterator() {
+		Iterator iterator = new IteratorEmpresa1(empleados);
+		return iterator;
+	}
 }
