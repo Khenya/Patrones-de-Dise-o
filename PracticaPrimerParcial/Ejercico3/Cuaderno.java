@@ -18,6 +18,11 @@ public class Cuaderno {
         this.tipo = tipo;
     }
 
+    public Cuaderno(String tipo, int hojas) {
+		this.tipo = tipo;
+		this.hojas = hojas;
+	}
+
     public void showInfo(){
         System.out.println("*******Cuaderno*******");
         System.out.println("Tipo: " + tipo );

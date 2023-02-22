@@ -26,7 +26,11 @@ public class Deportivo {
         this.numeroDePrendas = numeroDePrendas;
     }
 
-
+    public Deportivo(String talla, String color, int numeroDePrendas) {
+		this.talla = talla;
+		this.color = color;
+		this.numeroDePrendas = numeroDePrendas;
+	}
 
     public void showInfo(){
         System.out.println("*******Deportivo*******");

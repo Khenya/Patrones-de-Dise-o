@@ -18,6 +18,11 @@ public class Computadora {
         this.marca = marca;
     }
 
+    public Computadora(String marca, String sistemaOperativo) {
+		this.marca = marca;
+		this.os = sistemaOperativo;
+	}
+
     public void showInfo(){
         System.out.println("*******Computadora*******");
         System.out.println("Marca: " + marca );

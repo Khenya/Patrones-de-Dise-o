@@ -18,6 +18,11 @@ public class Mochila {
         this.tamano = tamano;
     }
 
+    public Mochila(int numeroDeBolisillos, String tamano) {
+		this.numeroBolsillos = numeroDeBolisillos;
+		this.tamano = tamano;
+	}
+
     public void showInfo(){
         System.out.println("*******Mochila*******");
         System.out.println("Número De Bolsillos: "+numeroBolsillos);

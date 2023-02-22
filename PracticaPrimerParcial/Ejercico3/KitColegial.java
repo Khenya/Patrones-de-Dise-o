@@ -1,11 +1,9 @@
 package PracticaPrimerParcial.Ejercico3;
 
 public class KitColegial implements IKit{
-    private Computadora computadora = new Computadora();
-    private Libros libro = new Libros();
-    private Mochila mochila = new Mochila();
-
-    public KitColegial(){}
+    private Computadora computadora ;
+    private Libros libros;
+    private Mochila mochila;
 
     public Computadora getComputadora() {
         return computadora;
@@ -14,12 +12,13 @@ public class KitColegial implements IKit{
         this.computadora = computadora;
     }
 
-    public Libros getLibro() {
-        return libro;
+    public Libros getLibros() {
+        return libros;
     }
-    public void setLibro(Libros libro) {
-        this.libro = libro;
+    public void setLibros(Libros libros) {
+        this.libros = libros;
     }
+    
 
     public Mochila getMochila() {
         return mochila;
@@ -37,7 +36,7 @@ public class KitColegial implements IKit{
     public void showInfo() {
         System.out.println("El Kit Colegial cuenta con:");
         mochila.showInfo();
-        libro.showInfo();
+    	libros.showInfo();	
         computadora.showInfo();
     }
     

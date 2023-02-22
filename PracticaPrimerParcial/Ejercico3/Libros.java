@@ -18,6 +18,11 @@ public class Libros {
         this.tipo = tipo;
     }
 
+    public Libros(String autor, String tipo) {
+		this.autor = autor;
+		this.tipo = tipo;
+	}
+
     public void showInfo(){
         System.out.println("*******Libros*******");
         System.out.println("Tipo: " + tipo );
